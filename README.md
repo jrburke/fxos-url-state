@@ -1,4 +1,4 @@
-# fsos-url-state
+# fxos-url-state
 
 A FirefoxOS app that uses pushState to manage state changes. This is a test
 app to see how the FirefoxOS system handles app restoration.
