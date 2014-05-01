@@ -1,0 +1,42 @@
+@import url(lib/topcoat/css/topcoat-mobile-light.css);
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.topnav :first-child {
+  align-self: flex-start;
+}
+
+.topnav :last-child {
+  align-self: flex-end;
+}
+
+.topnav > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+}
+
+form,
+.output {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+
+  margin: 1rem 0;
+}
+
+.label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.notes {
+  margin: 3rem;
+}

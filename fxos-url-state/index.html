@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="app.css" rel="stylesheet" type="text/css">
+    <script data-main="app" src="lib/alameda.js"></script>
+  </head>
+  <body>
+    <div class="topcoat-navigation-bar center topnav">
+      <div class="topcoat-navigation-bar__item center">
+        <button data-bind="back"
+                data-action="click: back"
+                class="topcoat-button"><</button>
+      </div>
+      <div class="topcoat-navigation-bar__item center">
+        <h1 class="topcoat-navigation-bar__title">URL State Test</h1>
+      </div>
+      <div class="topcoat-navigation-bar__item center">
+        <button data-bind="forward"
+                data-action="click: forward"
+                class="topcoat-button">></button>
+      </div>
+    </div>
+
+    <div class="output">
+      <div class="label">location</div>
+      <div data-bind="location" class="output-value"></div>
+
+      <div class="label">state</div>
+      <div data-bind="state" class="output-value"></div>
+
+      <div class="label">total history length</div>
+      <div data-bind="length" class="output-value"></div>
+    </div>
+
+    <form data-bind="inputForm" data-action="submit: addHistory">
+      <input data-bind="inputText" type="text" class="topcoat-text-input"
+             placeholder="type text, press enter" value="">
+    </form>
+
+    <div class="notes">
+      <p>History length is always the total history, and does not change by
+        going back or forward, only by adding new things. Going back, then
+        adding a new item will also shorten the length.</p>
+
+      <p>The app cannot know at what point in the history stack it is at,
+        unless it manually adds that tracking information to state objects
+        given to pushState, and hope that another pathway does not add to the
+        history in some way.</p>
+
+      <p>Calling pushState does not trigger a popstate or hashchange event,
+        the code manually needs to trigger an app update if it wants to
+        reflect the current state.</p>
+    </div>
+
+  </body>
+</html>

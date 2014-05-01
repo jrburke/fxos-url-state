@@ -1,0 +1,9 @@
+{
+  "amd": {},
+  "volo": {
+    "baseUrl": "fxos-url-state/lib",
+    "dependencies": {
+      "alameda": "github:requirejs/alameda/0.2.0"
+    }
+  }
+}
